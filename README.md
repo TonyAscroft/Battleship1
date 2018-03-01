@@ -1,5 +1,5 @@
 # Battleship1
-<img src="https://github.com/TonyAscroft/Battleship1/images/title.jpg>
+![image](https://user-images.githubusercontent.com/33400427/36874922-d1d9d402-1d7b-11e8-9360-edd5e5be8748.png)
 This is a Battleship game I created as a project to help learn JavaScript from step by step instructions in "Head First JavaScript Programming". <br> <br>
 What I did-
   <ul>
