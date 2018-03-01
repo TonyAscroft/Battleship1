@@ -26,8 +26,12 @@ var model = {
 	shipLength: 3,
 	shipsSunk: 0,
 	
-
-	
+    
+	ships: [
+		{ locations: [0, 0, 0], hits: ["", "", ""] },
+		{ locations: [0, 0, 0], hits: ["", "", ""] },
+		{ locations: [0, 0, 0], hits: ["", "", ""] }
+	],
 	
 	fire: function (guess) {
 		'use strict';
@@ -38,22 +42,22 @@ var model = {
 			// here's an improvement! Check to see if the ship
 			// has already been hit, message the user, and return true.
 			if (ship.hits[index] === "hit") {
-				view.displayMessage("Oops, you already hit that location!");
+				view.displayMessage("You already hit that location!");
 				return true;
 			} else if (index >= 0) {
 				ship.hits[index] = "hit";
 				view.displayHit(guess);
-				view.displayMessage("HIT!");
+				view.displayMessage("DIRECT HIT!");
 
 				if (this.isSunk(ship)) {
-					view.displayMessage("You sank my battleship!");
+					view.displayMessage("You sunk my battleship!");
 					this.shipsSunk++;
 				}
 				return true;
 			}
 		}
 		view.displayMiss(guess);
-		view.displayMessage("You missed.");
+		view.displayMessage("You missed. Recalibrate!");
 		return false;
 	},
 	
@@ -193,6 +197,18 @@ function handleKeyPress(e) {
 
 window.onload = init;
 
+function init() {
+	// Fire! button onclick handler
+	var fireButton = document.getElementById("fireButton");
+	fireButton.onclick = handleFireButton;
+
+	// handle "return" key press
+	var guessInput = document.getElementById("guessInput");
+	guessInput.onkeypress = handleKeyPress;
+
+	// place the ships on the game board
+	model.generateShipLocations();
+}
 
 
 

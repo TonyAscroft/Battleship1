@@ -1,46 +1,49 @@
 
 body {
-    background-color: black;
+    background-color: #12171a;
 }
 div#board {
 	position: relative;
-	width: 1024px;
-	height: 863px;
+	width: 1070px;
+	height: 900px;
 	margin: auto;
-	background: url("images/board2.jpg") no-repeat;
+	background: url("images/board8.jpg") no-repeat;
 }
 div#messageArea {
 	position: absolute;
-	top: 0px;
-	left: 0px;
-	color: rgb(83, 175,19);
+	bottom: 55px;
+	left: 240px;
+	color: #2cbebe;
+  font-family: monospace;
+  font-size: 20px;
 }
 table {
 	position: absolute;
-	left: 172px;
-	top: 98px;
+	left: 240px;
+	top: 150px;
 	border-spacing: 0px;
-	border: 1px solid white;
+	border: 1px solid rgba(256, 256, 256, .5);
 }
 table, tr, td {
-	border: 1px solid white;
+	border: 1px solid rgba(256, 256, 256, .5);
 
 }
 td {
-	width: 92px;
-	height: 92px;
+	width: 90px;
+	height: 90px;
 }
 form {
 	position: absolute;
-	bottom: 0px;
-	right: 0px;
-	padding 15px;
-	background-color: rgb(83, 175, 19);
+	bottom: 55px;
+	right: 170px;
+	padding 10px;
+	background-color: #2cbebe;
 }
 form input {
-	background-color: rgb(152, 207, 113);
-	border-color: rgb(83, 175, 19);
+	background-color: #aff1f0;
+	border-color: #2cbebe;
 	font-size: 1em;
+    width: 50px;
 }
 .hit {
 	background: url("images/ship.png") no-repeat center center;
